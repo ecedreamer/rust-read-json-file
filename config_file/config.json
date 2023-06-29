@@ -1,0 +1,8 @@
+{
+    "service_name": "Store Handler",
+    "port": 5503,
+    "wiring_config": {
+        "socket": "storage_in:bind:tcp://127.0.0.1:5503",
+        "queue_size": 100
+    }
+}
