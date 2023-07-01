@@ -1,4 +1,17 @@
-use config_reader::get_config;
+pub mod config_reader;
+pub mod message_printer;
+
+use config_reader::config::read_config;
+use config_reader::models::Config;
+use message_printer::printer::my_print;
+
+
+pub fn get_config(file_path: &str) -> Result<Config, Box<dyn std::error::Error>> {
+    let config = read_config(file_path)?;
+    my_print();
+    Ok(config)
+}
+
 
 fn main() {
     let file_path = "config_file/config.json";

@@ -1,6 +1,7 @@
 use std::fs::File;
 use std::io::Read;
-use crate::Config;
+use super::models::Config;
+
 
 
 pub fn read_file(file_path: &str) -> std::io::Result<String> {
